@@ -1,0 +1,22 @@
+{
+  "name": "koo__tour_practice",
+  "version": "1.0.0",
+  "description": "Practice HTML CSS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deankim1118/KOO__TOUR_Practice.git"
+  },
+  "author": "dean kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deankim1118/KOO__TOUR_Practice/issues"
+  },
+  "homepage": "https://github.com/deankim1118/KOO__TOUR_Practice#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
