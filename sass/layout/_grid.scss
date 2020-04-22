@@ -9,7 +9,6 @@
 .col {
   display: block;
   float: left;
-  background-color: skyblue;
 
   &:not(:last-child) {
     margin-right: $gutter-hor;
@@ -17,13 +16,13 @@
 }
 
 .col-1-of-2 {
-  width: 47.6%;
+  width: 47.25%;
 }
 
 .col-1-of-3 {
-  width: 30.13%;
+  width: 29.66%;
 }
 
 .col-1-of-4 {
-  width: 21.4%;
+  width: 20.87%;
 }

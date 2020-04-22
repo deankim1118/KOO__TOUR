@@ -25,7 +25,8 @@ $default-font-size: 1.6rem;
 // GRID
 $grid-width: 114rem;
 $gutter-ver: 8rem;
-$gutter-hor: 4.8%;
+$gutter-hor: 5.5%;
 
 // BOX SHADOW
-$box-shadow-dafault: 0 1.5rem 3rem rgba($color-black, 0.2);
+$box-shadow-dafault: 0 1rem 2.5rem rgba($color-black, 0.2);
+$box-shadow-active: 0 0.8rem 1.5rem rgba($color-black, 0.1);
