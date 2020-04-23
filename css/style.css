@@ -110,7 +110,7 @@ h3.heading-3 {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
-  transform: translateY(0.1rem); }
+  transform: translateY(-0.2rem); }
 
 .btn-text:active {
   box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -306,6 +306,69 @@ h3.heading-3 {
   .header__sub-title {
     font-size: 2rem;
     letter-spacing: 1.65rem; }
+
+.strories {
+  padding: 20rem 0;
+  position: relative; }
+  .strories .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.15; }
+    .strories .bg-video__content {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+.story {
+  width: 80%;
+  margin: 0 auto;
+  padding: 6rem;
+  background-color: rgba(238, 238, 238, 0.5);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  transform: skewX(-12deg); }
+  .story:after {
+    content: '';
+    clear: both;
+    display: table; }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__user {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    text-align: center;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 3rem; }
+    .story__user-photo {
+      width: 100%;
+      height: 100%;
+      transition: all 0.2s ease-in-out; }
+    .story__user-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+      backface-visibility: hidden; }
+  .story__review {
+    padding-top: 1%; }
+  .story:hover .story__user .story__user-photo {
+    filter: blur(3px) brightness(80%); }
+  .story:hover .story__user .story__user-name {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
 
 .section-about {
   background-color: #f7f7f7;
