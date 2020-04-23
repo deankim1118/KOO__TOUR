@@ -4,6 +4,10 @@
   max-width: $grid-width;
 
   @include clearboth;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
 }
 
 .col {
