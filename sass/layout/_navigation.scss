@@ -1,0 +1,138 @@
+.navigation {
+  &__checkbox {
+    display: none;
+
+    &:checked + .navigation__btn .navigation__icon {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+
+    &:checked ~ .navigation__bg {
+      transform: scale(80);
+    }
+
+    &:checked ~ .navigation__container {
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    background-color: $color-white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: $box-shadow-default;
+  }
+
+  &__icon {
+    @include centering;
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      background-color: $color-grey-dark-3;
+      width: 3rem;
+      height: 0.2rem;
+      transition: all 0.5s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__bg {
+    display: inline-block;
+    background-image: radial-gradient($color-green-light, $color-green-dark);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 300;
+    transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    width: 0;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  &__list {
+    @include centering;
+    list-style: none;
+    width: 100%;
+  }
+
+  &__item {
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    span {
+      padding-right: 1rem;
+    }
+  }
+
+  &__link {
+    padding: 0 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 50%,
+      $color-white 50%
+    );
+    background-size: 215%;
+    transition: all 0.5s;
+
+    &:hover {
+      background-position: 100%;
+      color: $color-green;
+      transform: translateX(0.5rem);
+    }
+  }
+}
