@@ -10,6 +10,7 @@ h2.heading-2 {
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
   background-image: linear-gradient(
     to right,
     $color-green-light,
@@ -29,6 +30,7 @@ h2.heading-2 {
 h3.heading-3 {
   font-size: $default-font-size;
   font-weight: 700;
+  text-transform: uppercase;
   color: $color-grey-dark;
 }
 
