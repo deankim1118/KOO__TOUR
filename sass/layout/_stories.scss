@@ -52,9 +52,14 @@
     position: relative;
     text-align: center;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     margin-right: 3rem;
+    border-radius: 50%;
+
+    @supports (shape-outside: circle()) or (clip-path: circle()) {
+      shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     &-photo {
       width: 100%;
