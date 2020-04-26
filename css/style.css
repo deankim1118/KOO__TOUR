@@ -7,24 +7,27 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
-      font-size: 43.75%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 37.5%; } }
+      font-size: 50%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.7;
-  padding: 3rem; }
+  line-height: 1.7; }
 
 .header__title {
   color: #fff; }
@@ -59,12 +62,24 @@ h2.heading-2 {
   h2.heading-2:hover {
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 56.25em) {
+    h2.heading-2 {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    h2.heading-2 {
+      font-size: 2.5rem; } }
 
 h3.heading-3 {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #777; }
+  @media only screen and (max-width: 56.25em) {
+    h3.heading-3 {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    h3.heading-3 {
+      font-size: 1.3rem; } }
 
 .paragraph {
   font-size: 1.5rem;
@@ -74,12 +89,27 @@ h3.heading-3 {
 
 .u-margin-bottom-big {
   margin-bottom: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-big {
+      margin-bottom: 3rem; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 2rem; } }
 
 .u-margin-bottom-small {
   margin-bottom: 1.8rem; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-small {
+      margin-bottom: 1.5rem; } }
 
 .u-center-text {
   text-align: center; }
@@ -262,11 +292,14 @@ h3.heading-3 {
     transform: scale(0.95); }
 
 .feature-box {
-  padding: 3rem 3.5rem;
+  padding: 2.5rem;
   background-color: rgba(238, 238, 238, 0.8);
   text-align: center;
   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
   transition: all 0.2s; }
+  @media only screen and (max-width: 75em) {
+    .feature-box {
+      padding: 2rem 0.9rem; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: 4rem;
@@ -469,6 +502,12 @@ h3.heading-3 {
   padding: 0px;
   margin: 0 auto;
   max-width: 114rem; }
+  @media only screen and (max-width: 75em) {
+    .row {
+      padding: 0 3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 60rem; } }
   .row:after {
     content: '';
     clear: both;
@@ -481,15 +520,43 @@ h3.heading-3 {
   float: left; }
   .col:not(:last-child) {
     margin-right: 5.5%; }
+    @media only screen and (max-width: 75em) {
+      .col:not(:last-child) {
+        margin-right: 4.5%; } }
+    @media only screen and (max-width: 56.25em) {
+      .col:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .col {
+      float: none; } }
 
 .col-1-of-2 {
   width: 47.25%; }
+  @media only screen and (max-width: 75em) {
+    .col-1-of-2 {
+      width: 47.75%; } }
+  @media only screen and (max-width: 56.25em) {
+    .col-1-of-2 {
+      width: 100%; } }
 
 .col-1-of-3 {
   width: 29.66%; }
+  @media only screen and (max-width: 75em) {
+    .col-1-of-3 {
+      width: 30.33%; } }
+  @media only screen and (max-width: 56.25em) {
+    .col-1-of-3 {
+      width: 100%; } }
 
 .col-1-of-4 {
   width: 20.87%; }
+  @media only screen and (max-width: 75em) {
+    .col-1-of-4 {
+      width: 21.62%; } }
+  @media only screen and (max-width: 56.25em) {
+    .col-1-of-4 {
+      width: 100%; } }
 
 .header {
   height: 95vh;
@@ -499,6 +566,9 @@ h3.heading-3 {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .header {
+      height: 85vh; } }
   .header__logo-box {
     position: absolute;
     top: 3.5rem;
