@@ -1,2 +1,3 @@
-# KOO__TOUR_Practice
- Practice HTML CSS
+# KOO-TOUR
+
+This webpage is built by HTML and Sass
