@@ -39,6 +39,16 @@
     z-index: 1000;
     cursor: pointer;
     box-shadow: $box-shadow-default;
+
+    @include respond(tab-port) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
+
+    @include respond(phone) {
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   &__icon {
@@ -80,6 +90,16 @@
     right: 6.5rem;
     z-index: 300;
     transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+
+    @include respond(tab-port) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
+
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 
   &__container {

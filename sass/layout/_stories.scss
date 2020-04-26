@@ -1,6 +1,10 @@
 .strories {
   padding: 20rem 0;
   position: relative;
+
+  @include respond(tab-land) {
+    padding: 10rem 0;
+  }
   .bg-video {
     position: absolute;
     top: 0;
@@ -29,8 +33,17 @@
 
   @include clearboth;
 
+  @include respond(tab-port) {
+    width: 100%;
+    transform: skew(0);
+  }
+
   > * {
     transform: skewX(12deg);
+
+    @include respond(tab-port) {
+      transform: skew(0);
+    }
   }
 
   &__user {
@@ -66,6 +79,11 @@
 
   &__review {
     padding-top: 1%;
+
+    p {
+      text-align: justify;
+      hyphens: auto;
+    }
   }
 
   &:hover &__user &__user-photo {
