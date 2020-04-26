@@ -7,6 +7,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 43.75%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   box-sizing: border-box; }
@@ -16,6 +25,25 @@ body {
   font-weight: 400;
   line-height: 1.7;
   padding: 3rem; }
+
+.header__title {
+  color: #fff; }
+  .header__title > * {
+    display: block; }
+
+.header__main-title {
+  font-size: 6rem;
+  letter-spacing: 3.3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__main-title {
+      letter-spacing: 2.3rem; } }
+
+.header__sub-title {
+  font-size: 2rem;
+  letter-spacing: 1.65rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__sub-title {
+      letter-spacing: 1rem; } }
 
 h2.heading-2 {
   display: inline-block;
@@ -484,16 +512,6 @@ h3.heading-3 {
     transform: translate(-50%, -50%);
     text-align: center;
     text-transform: uppercase; }
-  .header__title {
-    color: #fff; }
-    .header__title > * {
-      display: block; }
-  .header__main-title {
-    font-size: 6rem;
-    letter-spacing: 3.3rem; }
-  .header__sub-title {
-    font-size: 2rem;
-    letter-spacing: 1.65rem; }
 
 .navigation__checkbox {
   display: none; }
